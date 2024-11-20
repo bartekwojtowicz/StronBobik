@@ -18,133 +18,130 @@
     <main class="container">
         <section class="intro">
             <h2>Witaj na stronie Systemu Oceniania!</h2>
+
+            <!-- Szczegółowy opis punktacji -->
+            <h3>1. Wiek</h3>
             <div class="criteria">
-                <h3><strong>Ile masz lat:</strong></h3>
-                <ul>
-                    <li>Poniżej 14 lat = <span class="negative">-1pkt</span></li>
-                    <li>15 lat = <span class="positive">+1pkt</span></li>
-                    <li>16/17 lat = <span class="positive">+2pkt</span></li>
-                    <li>Powyżej 17 lat = <span class="positive">+3pkt</span></li>
-                </ul>
-
-                <h3><strong>Na jaką rangę:</strong></h3>
-                <ul>
-                    <li>Każda odpowiedź to <span class="positive">+1pkt</span>, chyba że będą jakieś błędy
-                        ortograficzne,
-                        to
-                        <span class="negative">-1pkt</span> za błąd.
-                    </li>
-                </ul>
-
-                <h3><strong>Dlaczego akurat ty:</strong></h3>
-                <ul>
-                    <li>Krótkie zdanie = <span class="positive">+1pkt</span></li>
-                    <li>Długie zdanie = <span class="positive">+2pkt</span></li>
-                    <li>Bardzo długie zdanie = <span class="positive">+3pkt</span></li>
-                    <li>Stosowanie kropek, przecinków itd. = <span class="positive">+1pkt</span></li>
-                    <li>Błędy ortograficzne = <span class="negative">-1pkt</span></li>
-                </ul>
-
-                <h3><strong>Twoje doświadczenie:</strong></h3>
-                <ul>
-                    <li>Błędy ortograficzne = <span class="negative">-1pkt</span></li>
-                    <li>Długie zdania = <span class="positive">+1pkt</span></li>
-                    <li>Bycie na innym serwerze Administratorem = <span class="negative">-1pkt</span></li>
-                    <li>Inne według administratora</li>
-                </ul>
-
-                <h1>Max. można zdobyć 20pkt</h1>
+                <p class="positive"> Powyżej 17 lat = 3pkt</p>
+                <p class="positive"> 16/17 lat = 2pkt</p>
+                <p class="positive"> 15 lat = 1pkt</p>
+                <p class="negative"> Poniżej 14 lat = -1pkt</p>
             </div>
 
-            <!-- Tabela punktów -->
-            <h2>Podsumowanie punktów</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Kategoria</th>
-                        <th>Oceniane Kryteria</th>
-                        <th>Max. Punkty</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Wiek</td>
-                        <td>Poniżej 14 lat = <span class="negative">-1pkt</span>, 15 lat = <span
-                                class="positive">+1pkt</span>, 16/17 lat = <span class="positive">+2pkt</span>, Powyżej
-                            17 lat = <span class="positive">+3pkt</span></td>
-                        <td>3</td>
-                    </tr>
-                    <tr>
-                        <td>Ranga</td>
-                        <td>Każda odpowiedź = <span class="positive">+1pkt</span>, błędy ortograficzne = <span
-                                class="negative">-1pkt</span></td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>Dlaczego akurat ty</td>
-                        <td>Krótkie zdanie = <span class="positive">+1pkt</span>, długie zdanie = <span
-                                class="positive">+2pkt</span>, bardzo długie zdanie = <span
-                                class="positive">+3pkt</span>, błędy ortograficzne = <span class="negative">-1pkt</span>
-                        </td>
-                        <td>8</td>
-                    </tr>
-                    <tr>
-                        <td>Doświadczenie</td>
-                        <td>Błędy ortograficzne = <span class="negative">-1pkt</span>, długie zdania = <span
-                                class="positive">+1pkt</span>, Administrator na innym serwerze = <span
-                                class="negative">-1pkt</span></td>
-                        <td>8</td>
-                    </tr>
-                    <tr>
-                        <td>Łączna liczba punktów</td>
-                        <td>Max. zdobyte punkty</td>
-                        <td>20</td>
-                    </tr>
-                </tbody>
-            </table>
+            <h3>2. Na jaką rangę</h3>
+            <div class="criteria">
+                <p class="positive"> Każda odpowiedź = 1pkt</p>
+                <p class="negative"> Błędy ortograficzne = -1pkt</p>
+            </div>
 
-            <!-- Tabela ocen -->
+            <h3>3. Dlaczego akurat ty</h3>
+            <div class="criteria">
+                <p class="positive"> Krótkie zdanie = 1pkt</p>
+                <p class="positive"> Długie zdanie = 2pkt</p>
+                <p class="positive"> Bardzo długie zdanie = 3pkt</p>
+                <p class="positive"> Stosowanie kropek, przecinków itd. = +1pkt</p>
+                <p class="negative"> Błędy ortograficzne = -1pkt</p>
+            </div>
+
+            <h3>4. Twoje doświadczenie</h3>
+            <div class="criteria">
+                <p class="negative"> Błędy ortograficzne = -1pkt</p>
+                <p class="positive"> Długie zdania = +1pkt</p>
+                <p class="negative"> Bycie na innym serwerze administratorem = -1pkt</p>
+                <p class="positive"> Inne według administratora</p>
+            </div>
+
+            <h1>Max. można zdobyć 20pkt</h1>
+
+            <!-- Tabela z punktami i ocenami -->
             <h2>Oceny na podstawie zdobytych punktów</h2>
             <table class="grades">
                 <thead>
                     <tr>
                         <th>Zakres punktów</th>
                         <th>Ocena</th>
+                        <th>Procent</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>18 - 20 pkt</td>
                         <td>6</td>
+                        <td>90% - 100%</td>
                     </tr>
                     <tr>
                         <td>16 - 17 pkt</td>
                         <td>5</td>
+                        <td>80% - 85%</td>
                     </tr>
                     <tr>
                         <td>14 - 15 pkt</td>
                         <td>4</td>
+                        <td>70% - 75%</td>
                     </tr>
                     <tr>
                         <td>12 - 13 pkt</td>
                         <td>3</td>
+                        <td>60% - 65%</td>
                     </tr>
                     <tr>
                         <td>10 - 11 pkt</td>
                         <td>2</td>
+                        <td>50% - 55%</td>
                     </tr>
                     <tr>
                         <td>0 - 9 pkt</td>
                         <td>1</td>
+                        <td>0% - 45%</td>
                     </tr>
                 </tbody>
             </table>
+
+            <!-- Formularz do obliczania procentu -->
+            <h2>Oblicz procent na podstawie zdobytych punktów:</h2>
+            <form id="scoreForm">
+                <label for="scoreInput">Wprowadź liczbę punktów (0-20): </label>
+                <input type="number" id="scoreInput" name="score" min="0" max="20" required>
+                <button type="submit">Oblicz Procent</button>
+            </form>
+
+            <div id="result" style="margin-top: 20px;">
+                <h3>Wynik:</h3>
+                <p id="percentageResult"></p>
+            </div>
         </section>
 
         <footer>
             <p>&copy; 2024 GoldPlugins. Wszystkie prawa zastrzeżone.</p>
         </footer>
     </main>
+
+    <script>
+        document.getElementById('scoreForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            var score = parseInt(document.getElementById('scoreInput').value);
+            var percentage = (score / 20) * 100;
+            var resultText = '';
+
+            if (score >= 18) {
+                resultText = 'Ocena: 6, Procent: 90% - 100%';
+            } else if (score >= 16) {
+                resultText = 'Ocena: 5, Procent: 80% - 85%';
+            } else if (score >= 14) {
+                resultText = 'Ocena: 4, Procent: 70% - 75%';
+            } else if (score >= 12) {
+                resultText = 'Ocena: 3, Procent: 60% - 65%';
+            } else if (score >= 10) {
+                resultText = 'Ocena: 2, Procent: 50% - 55%';
+            } else {
+                resultText = 'Ocena: 1, Procent: 0% - 45%';
+            }
+
+            document.getElementById('percentageResult').textContent = `Twoje punkty: ${score} | Procent: ${percentage.toFixed(2)}% | ${resultText}`;
+        });
+    </script>
+
 </body>
 
 </html>
