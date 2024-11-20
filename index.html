@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Oceniania - GoldPlugins</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>GoldPlugins - System Oceniania</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="intro">
+            <h2>Witaj na stronie Systemu Oceniania!</h2>
+            <div class="criteria">
+                <h3><strong>Ile masz lat:</strong></h3>
+                <ul>
+                    <li>Poniżej 14 lat = <span class="negative">-1pkt</span></li>
+                    <li>15 lat = <span class="positive">+1pkt</span></li>
+                    <li>16/17 lat = <span class="positive">+2pkt</span></li>
+                    <li>Powyżej 17 lat = <span class="positive">+3pkt</span></li>
+                </ul>
+
+                <h3><strong>Na jaką rangę:</strong></h3>
+                <ul>
+                    <li>Każda odpowiedź to <span class="positive">+1pkt</span>, chyba że będą jakieś błędy
+                        ortograficzne,
+                        to
+                        <span class="negative">-1pkt</span> za błąd.
+                    </li>
+                </ul>
+
+                <h3><strong>Dlaczego akurat ty:</strong></h3>
+                <ul>
+                    <li>Krótkie zdanie = <span class="positive">+1pkt</span></li>
+                    <li>Długie zdanie = <span class="positive">+2pkt</span></li>
+                    <li>Bardzo długie zdanie = <span class="positive">+3pkt</span></li>
+                    <li>Stosowanie kropek, przecinków itd. = <span class="positive">+1pkt</span></li>
+                    <li>Błędy ortograficzne = <span class="negative">-1pkt</span></li>
+                </ul>
+
+                <h3><strong>Twoje doświadczenie:</strong></h3>
+                <ul>
+                    <li>Błędy ortograficzne = <span class="negative">-1pkt</span></li>
+                    <li>Długie zdania = <span class="positive">+1pkt</span></li>
+                    <li>Bycie na innym serwerze Administratorem = <span class="negative">-1pkt</span></li>
+                    <li>Inne według administratora</li>
+                </ul>
+
+                <h1>Max. można zdobyć 20pkt</h1>
+            </div>
+
+            <!-- Tabela punktów -->
+            <h2>Podsumowanie punktów</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Kategoria</th>
+                        <th>Oceniane Kryteria</th>
+                        <th>Max. Punkty</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Wiek</td>
+                        <td>Poniżej 14 lat = <span class="negative">-1pkt</span>, 15 lat = <span
+                                class="positive">+1pkt</span>, 16/17 lat = <span class="positive">+2pkt</span>, Powyżej
+                            17 lat = <span class="positive">+3pkt</span></td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>Ranga</td>
+                        <td>Każda odpowiedź = <span class="positive">+1pkt</span>, błędy ortograficzne = <span
+                                class="negative">-1pkt</span></td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Dlaczego akurat ty</td>
+                        <td>Krótkie zdanie = <span class="positive">+1pkt</span>, długie zdanie = <span
+                                class="positive">+2pkt</span>, bardzo długie zdanie = <span
+                                class="positive">+3pkt</span>, błędy ortograficzne = <span class="negative">-1pkt</span>
+                        </td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>Doświadczenie</td>
+                        <td>Błędy ortograficzne = <span class="negative">-1pkt</span>, długie zdania = <span
+                                class="positive">+1pkt</span>, Administrator na innym serwerze = <span
+                                class="negative">-1pkt</span></td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>Łączna liczba punktów</td>
+                        <td>Max. zdobyte punkty</td>
+                        <td>20</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Tabela ocen -->
+            <h2>Oceny na podstawie zdobytych punktów</h2>
+            <table class="grades">
+                <thead>
+                    <tr>
+                        <th>Zakres punktów</th>
+                        <th>Ocena</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>18 - 20 pkt</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>16 - 17 pkt</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>14 - 15 pkt</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>12 - 13 pkt</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>10 - 11 pkt</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>0 - 9 pkt</td>
+                        <td>1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 GoldPlugins. Wszystkie prawa zastrzeżone.</p>
+        </footer>
+    </main>
+</body>
+
+</html>

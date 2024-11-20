@@ -1,0 +1,143 @@
+/* Globalne resetowanie */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ustawienia globalne */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    padding-top: 50px;
+}
+
+/* Styl kontenera */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Nagłówek */
+header {
+    background-color: #ff8c00;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.8rem;
+}
+
+/* Sekcja główna */
+section.intro {
+    margin-top: 40px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+section h3 {
+    font-size: 1.2rem;
+    color: #444;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+section p,
+section ul {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+section ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+section ul li {
+    margin-bottom: 8px;
+}
+
+/* Tabele */
+table {
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    font-size: 1rem;
+}
+
+th {
+    background-color: #ff8c00;
+    color: white;
+}
+
+td {
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Kolory punktów */
+.positive {
+    color: #4caf50;
+    font-weight: bold;
+}
+
+.negative {
+    color: #f44336;
+    font-weight: bold;
+}
+
+/* Tabela z ocenami */
+table.grades {
+    margin-top: 40px;
+}
+
+table.grades td {
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Stopka */
+footer {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 1rem;
+}
