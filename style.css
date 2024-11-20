@@ -1,143 +1,320 @@
-/* Globalne resetowanie */
+/* Resetowanie domyślnych marginesów i paddingów */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Ustawienia globalne */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
-    padding-top: 50px;
-}
-
-/* Styl kontenera */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: fadeIn 1s ease-out;
 }
 
 /* Nagłówek */
 header {
-    background-color: #ff8c00;
+    background: linear-gradient(45deg, #f8b400, #f7b500);
+    color: white;
     padding: 20px 0;
     text-align: center;
-    color: white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #e0a800;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    animation: headerAnimation 2s ease-out;
+}
+
+@keyframes headerAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 header h1 {
     font-size: 2.8rem;
-}
-
-/* Sekcja główna */
-section.intro {
-    margin-top: 40px;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-}
-
-section h2 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 20px;
-    text-align: center;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-section h3 {
-    font-size: 1.2rem;
+/* Główna zawartość */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+/* Sekcja wprowadzenia */
+.intro h2,
+.intro h3 {
+    margin-bottom: 20px;
+}
+
+.intro h2 {
+    font-size: 2.2rem;
     color: #444;
-    margin-top: 15px;
     font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
 }
 
-section p,
-section ul {
+.intro h3 {
+    font-size: 1.2rem;
+    color: #666;
+    margin: 15px 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.intro h3:hover {
+    transform: scale(1.05);
+}
+
+/* Kolorowe oznaczenia punktów */
+.positive {
+    color: #28a745;
+    /* Zielony kolor dla pozytywnych punktów */
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    background-color: #d4edda;
+    padding: 8px 15px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
     font-size: 1.1rem;
-    color: #555;
+    transition: background-color 0.3s ease;
 }
 
-section ul {
-    list-style-type: disc;
-    margin-left: 20px;
+.positive:hover {
+    background-color: #c3e6cb;
 }
 
-section ul li {
-    margin-bottom: 8px;
+.positive::before {
+    content: '+';
+    margin-right: 10px;
+    color: #28a745;
+    font-weight: bold;
+    font-size: 1.3rem;
 }
 
-/* Tabele */
+.negative {
+    color: #dc3545;
+    /* Czerwony kolor dla negatywnych punktów */
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    background-color: #f8d7da;
+    padding: 8px 15px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.negative:hover {
+    background-color: #f5c6cb;
+}
+
+.negative::before {
+    content: '-';
+    margin-right: 10px;
+    color: #dc3545;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+/* Tabela ocen */
 table {
     width: 100%;
     margin-top: 30px;
     border-collapse: collapse;
-    background-color: #fff;
+    text-align: left;
     border-radius: 8px;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(45deg, #ffffff, #f7f7f7);
 }
 
 th,
 td {
-    padding: 12px;
-    text-align: left;
-    font-size: 1rem;
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
 }
 
 th {
-    background-color: #ff8c00;
+    background-color: #f8b400;
+    /* Żółty kolor dla nagłówków */
     color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 8px;
 }
 
 td {
-    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+    color: #333;
+    font-size: 1.1rem;
+    border: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
 
 tr:hover {
     background-color: #f1f1f1;
+    transform: scale(1.02);
+    transition: transform 0.2s ease-in-out;
 }
 
-tr:last-child td {
-    border-bottom: none;
+/* Formularz do obliczania procentów */
+#scoreForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    transition: background 0.3s ease;
 }
 
-/* Kolory punktów */
-.positive {
-    color: #4caf50;
-    font-weight: bold;
+#scoreForm:hover {
+    background-color: #f4f4f4;
 }
 
-.negative {
-    color: #f44336;
-    font-weight: bold;
+#scoreForm label {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #444;
+    text-transform: uppercase;
 }
 
-/* Tabela z ocenami */
-table.grades {
-    margin-top: 40px;
+#scoreForm input {
+    width: 150px;
+    padding: 12px;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border 0.3s ease;
 }
 
-table.grades td {
-    text-align: center;
+#scoreForm input:focus {
+    border: 2px solid #f8b400;
+    outline: none;
+}
+
+#scoreForm button {
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    background-color: #f8b400;
+    /* Żółty kolor przycisku */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+#scoreForm button:hover {
+    background-color: #e69800;
+    /* Ciemniejszy żółty przy najechaniu */
+    transform: scale(1.05);
+}
+
+#scoreForm button:active {
+    background-color: #cc8b00;
+    transform: scale(0.98);
+}
+
+/* Wynik obliczeń */
+#result {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+#percentageResult {
+    font-size: 1.4rem;
+    color: #333;
     font-weight: 600;
+    text-align: center;
+    margin-top: 10px;
+    text-transform: uppercase;
 }
 
 /* Stopka */
 footer {
-    background-color: #ff6600;
+    background-color: #222;
     color: white;
-    padding: 10px 0;
     text-align: center;
-    margin-top: 40px;
+    padding: 20px;
+    font-size: 0.9rem;
+    margin-top: 50px;
+    font-style: italic;
 }
 
-footer p {
-    font-size: 1rem;
+/* Animacje i efekty przejść */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .intro h2 {
+        font-size: 1.5rem;
+    }
+
+    .criteria p {
+        font-size: 1rem;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    #scoreForm label,
+    #scoreForm input,
+    #scoreForm button {
+        font-size: 1rem;
+    }
 }
