@@ -22,36 +22,36 @@
             <!-- Szczegółowy opis punktacji -->
             <h3>1. Wiek</h3>
             <div class="criteria">
-                <p class="positive"> Powyżej 17 lat = 3pkt</p>
-                <p class="positive"> 16/17 lat = 2pkt</p>
-                <p class="positive"> 15 lat = 1pkt</p>
-                <p class="negative"> Poniżej 14 lat = -1pkt</p>
+                <p class="positive"> Powyżej 17 lat = 30pkt</p>
+                <p class="positive"> 16/17 lat = 20pkt</p>
+                <p class="positive"> 15 lat = 10pkt</p>
+                <p class="negative"> Poniżej 14 lat = -10pkt</p>
             </div>
 
             <h3>2. Na jaką rangę</h3>
             <div class="criteria">
-                <p class="positive"> Każda odpowiedź = 1pkt</p>
-                <p class="negative"> Błędy ortograficzne = -1pkt</p>
+                <p class="positive"> Każda odpowiedź = 10pkt</p>
+                <p class="negative"> Błędy ortograficzne = -10pkt</p>
             </div>
 
             <h3>3. Dlaczego akurat ty</h3>
             <div class="criteria">
-                <p class="positive"> Krótkie zdanie = 1pkt</p>
-                <p class="positive"> Długie zdanie = 2pkt</p>
-                <p class="positive"> Bardzo długie zdanie = 3pkt</p>
-                <p class="positive"> Stosowanie kropek, przecinków itd. = +1pkt</p>
-                <p class="negative"> Błędy ortograficzne = -1pkt</p>
+                <p class="positive"> Krótkie zdanie = 10pkt</p>
+                <p class="positive"> Długie zdanie = 20pkt</p>
+                <p class="positive"> Bardzo długie zdanie = 30pkt</p>
+                <p class="positive"> Stosowanie kropek, przecinków itd. = +10pkt</p>
+                <p class="negative"> Błędy ortograficzne = -10pkt</p>
             </div>
 
             <h3>4. Twoje doświadczenie</h3>
             <div class="criteria">
-                <p class="negative"> Błędy ortograficzne = -1pkt</p>
-                <p class="positive"> Długie zdania = +1pkt</p>
-                <p class="negative"> Bycie na innym serwerze administratorem = -1pkt</p>
+                <p class="negative"> Błędy ortograficzne = -10pkt</p>
+                <p class="positive"> Długie zdania = +10pkt</p>
+                <p class="negative"> Bycie na innym serwerze administratorem = -10pkt</p>
                 <p class="positive"> Inne według administratora</p>
             </div>
 
-            <h1>Max. można zdobyć 20pkt</h1>
+            <h1>Max. można zdobyć 99pkt</h1>
 
             <!-- Tabela z punktami i ocenami -->
             <h2>Oceny na podstawie zdobytych punktów</h2>
@@ -65,34 +65,34 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>18 - 20 pkt</td>
+                        <td>99 pkt</td>
                         <td>6</td>
-                        <td>90% - 100%</td>
+                        <td>100%</td>
                     </tr>
                     <tr>
-                        <td>16 - 17 pkt</td>
+                        <td>98 - 89 pkt</td>
                         <td>5</td>
-                        <td>80% - 85%</td>
+                        <td>89% - 89.9%</td>
                     </tr>
                     <tr>
-                        <td>14 - 15 pkt</td>
+                        <td>87 - 64 pkt</td>
                         <td>4</td>
-                        <td>70% - 75%</td>
+                        <td>64% - 87%</td>
                     </tr>
                     <tr>
-                        <td>12 - 13 pkt</td>
+                        <td>63 - 42 pkt</td>
                         <td>3</td>
-                        <td>60% - 65%</td>
+                        <td>42% - 63%</td>
                     </tr>
                     <tr>
-                        <td>10 - 11 pkt</td>
+                        <td>41 - 25 pkt</td>
                         <td>2</td>
-                        <td>50% - 55%</td>
+                        <td>25% - 41%</td>
                     </tr>
                     <tr>
-                        <td>0 - 9 pkt</td>
+                        <td>24 - 0 pkt</td>
                         <td>1</td>
-                        <td>0% - 45%</td>
+                        <td>0% - 24%</td>
                     </tr>
                 </tbody>
             </table>
@@ -100,8 +100,8 @@
             <!-- Formularz do obliczania procentu -->
             <h2>Oblicz procent na podstawie zdobytych punktów:</h2>
             <form id="scoreForm">
-                <label for="scoreInput">Wprowadź liczbę punktów (0-20): </label>
-                <input type="number" id="scoreInput" name="score" min="0" max="20" required>
+                <label for="scoreInput">Wprowadź liczbę punktów (0-99): </label>
+                <input type="number" id="scoreInput" name="score" min="0" max="99" required>
                 <button type="submit">Oblicz Procent</button>
             </form>
 
@@ -121,21 +121,21 @@
             event.preventDefault();
 
             var score = parseInt(document.getElementById('scoreInput').value);
-            var percentage = (score / 20) * 100;
+            var percentage = (score / 99) * 100;
             var resultText = '';
 
-            if (score >= 18) {
-                resultText = 'Ocena: 6, Procent: 90% - 100%';
-            } else if (score >= 16) {
-                resultText = 'Ocena: 5, Procent: 80% - 85%';
-            } else if (score >= 14) {
-                resultText = 'Ocena: 4, Procent: 70% - 75%';
-            } else if (score >= 12) {
-                resultText = 'Ocena: 3, Procent: 60% - 65%';
-            } else if (score >= 10) {
-                resultText = 'Ocena: 2, Procent: 50% - 55%';
+            if (score === 99) {
+                resultText = 'Ocena: 6, Procent: 100%';
+            } else if (score >= 89) {
+                resultText = 'Ocena: 5, Procent: ' + percentage.toFixed(2) + '%';
+            } else if (score >= 64) {
+                resultText = 'Ocena: 4, Procent: ' + percentage.toFixed(2) + '%';
+            } else if (score >= 42) {
+                resultText = 'Ocena: 3, Procent: ' + percentage.toFixed(2) + '%';
+            } else if (score >= 25) {
+                resultText = 'Ocena: 2, Procent: ' + percentage.toFixed(2) + '%';
             } else {
-                resultText = 'Ocena: 1, Procent: 0% - 45%';
+                resultText = 'Ocena: 1, Procent: ' + percentage.toFixed(2) + '%';
             }
 
             document.getElementById('percentageResult').textContent = `Twoje punkty: ${score} | Procent: ${percentage.toFixed(2)}% | ${resultText}`;
